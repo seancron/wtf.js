@@ -41,9 +41,16 @@ function main() {
          });
      }
      }(jQuery));
-     console.log("starting blink.");
-     $('body').blink(100);
-     console.log("stopping blink.");
+     var d = new Date();
+     if( d.getSeconds() % 5 == 0) {
+         console.log("starting blink.");
+         $('body').blink(666);
+         $('p').blink(50);
+         $('h1').blink(1000);
+         $('h2').blink(500);
+         $('h3').blink(333);
+         console.log("stopping blink.");
+     }
 };
 
 addJQuery(main);
