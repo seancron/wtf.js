@@ -1,4 +1,5 @@
 // ==UserScript==
+// @name wtf.js
 // @include *
 // ==/UserScript==
 
@@ -15,8 +16,6 @@ function addJQuery(callback) {
 }
 
 function main() {
-
-    console.log("Loading blink function.");
     (function($)
      {
      $.fn.blink = function(options)
@@ -43,13 +42,14 @@ function main() {
      }(jQuery));
      var d = new Date();
      if( d.getSeconds() % 5 == 0) {
-         console.log("starting blink.");
          $('body').blink(666);
          $('p').blink(50);
          $('h1').blink(1000);
          $('h2').blink(500);
          $('h3').blink(333);
-         console.log("stopping blink.");
+         $('span').blink(250);
+         $('td').blink(400);
+         $('img').blink(750);
      }
 };
 
